@@ -1,0 +1,244 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header, .principal, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5%;
+}
+
+.logo {
+    background: #ffff00;
+    color: black;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px;
+    background: #222;
+}
+
+nav a:hover {
+    color: #fdfdfa;
+}
+
+.principal {
+    gap: 30px;
+}
+
+.imagem {
+    width: 35%;
+}
+
+.imagem img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.texto {
+    flex: 1;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #f5c400;
+    margin-bottom: 15px;
+}
+
+.texto p {
+    margin-bottom: 15px;
+}
+
+.destaques, .localizacao, .perguntas {
+    padding: 40px 8%;
+}
+
+.destaques, .perguntas {
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card, .perguntas details, .mapa {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card p, .endereco p, .perguntas details p {
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.icone, .mapa span {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.chamada {
+    background: #f5c400;
+    color: black;
+    text-align: center;
+    padding: 40px 5%;
+}
+
+.chamada h2 {
+    color: black;
+}
+
+.chamada p {
+    margin-bottom: 20px;
+}
+
+.chamada a, .endereco a {
+    display: inline-block;
+    background: #111;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.localizacao h2 {
+    text-align: center;
+}
+
+.local-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+}
+
+.mapa {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.endereco p {
+    margin-bottom: 10px;
+}
+
+.endereco a {
+    background: #f5c400;
+    color: black;
+    margin-top: 10px;
+}
+
+.perguntas details {
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.perguntas summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer {
+    background: #222;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer h3 {
+    color: #f5c400;
+}
+
+@media (max-width: 800px) {
+    .principal {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .imagem {
+        width: 70%;
+    }
+
+    .cards, .local-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .texto h1 {
+        font-size: 26px;
+    }
+
+    .informacao {
+        font-size: 13px;
+    }
+
+    .perguntas {
+        padding: 30px 5%;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        padding: 15px;
+    }
+
+    .logo {
+        padding: 10px;
+    }
+
+    .informacao {
+        display: none;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        font-size: 14px;
+    }
+
+    .imagem {
+        width: 100%;
+    }
+
+    .principal, .destaques, .localizacao, .chamada {
+        padding: 30px 5%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
